@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>SudokuGrid.qml</file>
+    </qresource>
+</RCC>
