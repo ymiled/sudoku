@@ -1,91 +1,34 @@
-# 🧩 Sudoku - Jeu interactif développé en C++ / QML
+This is the repository of my Sudoku project. It is a graphic interface developed using C++ and QML for the Sudoku game.
 
-## 👩‍💻 Concepteurs
+### Logic of the game
 
-Ce projet a été développé par :
+- The player chooses a difficulty (grid partially pre-filled according to the level).
 
-- Amani KRID  
-- Youssef MILED
+- They can click on empty cells to change their value: each click increments the value between 1 → 9 → empty.
 
----
+- The "Check" button automatically analyzes the grid:
 
-## 🎯 Objectif du projet
+- detects duplicates in rows, columns, and 3x3 blocks,
 
-Ce projet consiste à implémenter un jeu de Sudoku interactif avec une interface graphique basée sur **QML** et une logique métier en **C++**, permettant à l’utilisateur :
+- displays error messages in case of conflicts.
 
-- de générer une grille selon différents niveaux de difficulté (débutant, facile, intermédiaire, expert) [**BONUS**],
-- de remplir les cellules tout en respectant les règles du Sudoku,
-- de détecter automatiquement les conflits dans les lignes, colonnes et blocs 3x3 [**BONUS**],
-- de sauvegarder/recharger une partie en cours [**BONUS**],
-- de vérifier si la solution est correcte.
+- The player can save their progress and reload it later.
 
----
+- A "Restart" button allows them to start a new grid at the same level.
 
-## 📸 Aperçu de l’interface
+### Getting started
 
-> _(Voici quelques captures illustrant les différentes configurations du jeu)_
-
-### 🟢 Menu principal
-![Menu principal](./screenshots/menu_principal.png)
-
-### 🔰 Grille - Niveau débutant
-![Grille débutant](./screenshots/debutant.png)
-
-### 🟡 Grille - Niveau intermédiaire
-![Grille intermédiaire](./screenshots/intermediaire.png)
-
-### ❌ Exemple de conflit détecté (ligne ou colonne)
-![Conflit détecté](./screenshots/conflit.png)
-
-### ⚠️ Exemple de message conflit dans un bloc 3x3
-![Autre type de conflit détecté](./screenshots/autre_conflit.png)
-
----
-
-## ⚙️ Utilisation
-
-### 🔧 Prérequis
-
-- Qt 6 (avec Qt Quick)
-- Qt Creator (recommandé pour une ouverture rapide du projet)
-- Un système compatible : **Linux**, **Windows** ou **macOS**
-
----
-
-
-### 🕹️ Logique du jeu
-
-- Le joueur choisit une difficulté (grille pré-remplie partiellement selon le niveau).
-
-- Il peut cliquer sur les cellules vides pour modifier leur valeur : chaque clic fait incrémenter la valeur entre 1 → 9 → vide.
-
-- Le bouton "Vérifier" analyse automatiquement la grille :
-
-        - détection des doublons dans lignes, colonnes et blocs 3×3,
-
-        - affichage de messages d'erreur en cas de conflit.
-
-- Le joueur peut sauvegarder sa progression, et la recharger plus tard.
-
-- Un bouton "Recommencer" permet de relancer une nouvelle grille du même niveau.
-
-### 🚧 État d'avancement
-
-Le projet est **terminé** et pleinement fonctionnel ✅ 
-
-### ▶️ Lancer le projet
-
-Cloner le dépôt :
    ```bash
    git clone https://gitlab.ec-lyon.fr/akrid/sudoku/
    
-   Sélectionne "Ouvrir un projet" dans Qt Creator et choisissez le fichier CMakeLists.txt.
+   Select "Open Project" in Qt Creator and choose the CMakeLists.txt file.
 
-   Assurez-vous qu’un exécutable est bien configuré dans le projet.
+   Make sure an executable is configured in the project.
+        
+   Compile the project by pressing Ctrl + B or clicking "Build".
+        
+   Then launch the program by clicking the "Run" button.
 
-   Compilez le projet en appuyant sur Ctrl + B ou en cliquant sur "Construire" (ou "Build").
-
-   Puis lancez le programme en cliquant sur le bouton "Exécuter" (ou "Run").
 
 
 
